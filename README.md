@@ -5,17 +5,21 @@ https://www.reddit.com/r/gameoflife/s/7AyYxG5HDv
 A green background appears when the polyomino belongs to a valid group.
 
 Controls:
+
   Click on a cell to toggle it alive or dead. Space clears the grid, and P prints
   an emoji version of the current cell arrangement. 
 
 In v3, the main things in the code that I'll highlight (which you can mess around
 with) are as follows:
+
 Lines 8 and 9: The number of blocks in the grid and their size in pixels. The current
                code assumes that the grid is square (windowSize by windowSize). If 
                you want, you could try to rework it to allow rectangular grids, but 
                I haven't bothered.
+               
 Line 16-25: The colors of the blocks, currently minesweeper-themed. You can tweak them
             to make them more intuitive to you. They are in RGB values from 0-255.
+            
 Line 111: The symmetry variable can be used to enforce symmetry in the grid.
           Specifically, it can equal:
             "d1" (for mirror symmetry like the letter A)
